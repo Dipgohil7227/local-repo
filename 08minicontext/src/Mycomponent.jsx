@@ -22,8 +22,11 @@ function Mycomponent() {
         </ul>
         <input type="text" id="foodinput" placeholder='Enter the Food Name '/>
         <button onClick={handleAddFood} >Add food    </button>
+        <button>add new</button>
     </div>
   )
 }
 
 export default Mycomponent
+
+
