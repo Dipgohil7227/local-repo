@@ -1,7 +1,12 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
-
+import { Link, Navigate, NavLink } from 'react-router-dom'
+import Login from '../login/Login';
 export default function Header() {
+
+    function GotoLogin() {
+        Navigate("../login/Login.jsx")
+
+    }
     return (
         <header className="shadow sticky z-50 top-0">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -18,7 +23,7 @@ export default function Header() {
                             to="#"
                             className="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
                         >
-                            Log in
+                            <button onClick={GotoLogin}>Log in</button>
                         </Link>
                         <Link
                             to="#"
@@ -34,8 +39,8 @@ export default function Header() {
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             <li>
                                 <NavLink
-                                to="/"
-                                    className={({isActive}) =>
+                                    to="/"
+                                    className={({ isActive }) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
@@ -44,8 +49,8 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/about"
-                                    className={({isActive}) =>
+                                    to="/about"
+                                    className={({ isActive }) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
@@ -54,8 +59,8 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/contact"
-                                    className={({isActive}) =>
+                                    to="/contact"
+                                    className={({ isActive }) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
@@ -64,15 +69,15 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                to="/github"
-                                    className={({isActive}) =>
+                                    to="/github"
+                                    className={({ isActive }) =>
                                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
                                     Github
                                 </NavLink>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -80,3 +85,5 @@ export default function Header() {
         </header>
     );
 }
+
+https://www.google.com/maps/place/Japan/@33.0477205,126.5524517,5z/data=!3m1!4b1!4m6!3m5!1s0x34674e0fd77f192f:0xf54275d47c665244!8m2!3d36.204824!4d138.252924!16zL20vMDNfM2Q?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D
